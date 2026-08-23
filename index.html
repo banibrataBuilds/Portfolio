@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banibrata's Portfolio</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="hero-lightpass"></canvas>
+
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a href="#" class="logo">banibrataBuilds</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="availability-badge">Available for new Projects</div>
+            <h1>Hey! , I am <span>Banibrata</span></h1>
+            <h2>Full-Stack Developer</h2>
+            <p>I build fast, responsive and user-friendly web applications
+                <br>with clean code and modern technol .
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about">
+            <div class="about-text">
+                <h2 class="section-title">About Me</h2>
+                <p>I'm Banibrata, a passionate Full Stack Developer who loves turning ideas into real-world web
+                    applications.</p>
+
+                <p>I enjoy solving problems, writing clean and efficient code, and building projects that make a
+                    difference. I'm constantly learning new technologoes and pushing my limits to grow as a developer.
+                </p>
+                <p>When I'm not coding, I'm either exploring new tech, listening to music, watching movies, or planning
+                    my next trip.</p>
+            </div>
+            <div class="about-image">
+                <img src="About_Section_Photo.png" style="border-radius: 20px; border: 2px solid var(--accent-purple);"
+                    alt="Creative Developer">
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Frontend</h3>
+                    <div class="tag-grid">
+                        <span class="tag">html 5</span>
+                        <span class="tag">CSS 3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Backend</h3>
+                    <div class="tag-grid">
+                        <span class="tag">C & C++</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express.js</span>
+                        <span class="tag">REST APIs</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Database</h3>
+                    <div class="tag-grid">
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Supabase</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <div class="exp-year">2025</div>
+                    <div class="exp-card">
+                        <h3>SEO Intern</h3>
+                        <h4>at Tecosys</h4>
+                        <p>Gained practical experience in SEO, including keyword research, content optimization, website
+                            analysis, and understanding strategies to improve search visibility and online presence.
+                            .</p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-year">---</div>
+                    <div class="exp-card">
+                        <h3>Looking for Future Opportunities</h3>
+                        <h4>---</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="projects-header">
+                <h2 class="section-title">My Projects</h2>
+                <p>A collection of projects I've worked on, ranging from web applications to mobile apps and everything
+                    in between.</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="Project-1.png" alt="Project" class="project-img">
+                    <div class="project-content">
+                        <h3>Virtual Library</h3>
+                        <p>A student-focused virtual library platform that organizes books and study notes in one place,
+                            with authentication, dashboards, resource management, and an admin panel.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/banibrataBuilds/virtual-library" class="btn btn-primary btn-sm"
+                                target="_blank" rel="noopener noreferrer">View Details</a>
+                            <button class="icon-btn"><i class="ph ph-arrow-right"></i></button>
+                            <a href="https://github.com/banibrataBuilds" class="icon-btn" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="ph ph-github-logo"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="Project-2.png" alt="Project" class="project-img">
+                    <div class="project-content">
+                        <h3>Resume Builder</h3>
+                        <p>A user-friendly resume builder that allows users to enter their personal and professional
+                            information and generate a professional resume quickly with just a few clicks.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Supabase</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/banibrataBuilds/Resume-Builder" class="btn btn-primary btn-sm"
+                                target="_blank" rel="noopener noreferrer">View Details</a>
+                            <button class="icon-btn"><i class="ph ph-arrow-right"></i></button>
+                            <a href="https://github.com/banibrataBuilds" class="icon-btn" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="ph ph-github-logo"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="Project-3.png" alt="Project" class="project-img">
+                    <div class="project-content">
+                        <h3>Student Flow</h3>
+                        <p>A modern student productivity platform for managing tasks, study sessions, exams, and notes
+                            while tracking academic progress through interactive analytics and a personalized dashboard.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">PLpgSQL</span>
+                            <span class="tag">Supabase</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/banibrataBuilds/StudentFlow" class="btn btn-primary btn-sm"
+                                target="_blank" rel="noopener noreferrer">View Details</a>
+                            <button class="icon-btn"><i class="ph ph-arrow-right"></i></button>
+                            <a href="https://github.com/banibrataBuilds" class="icon-btn" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="ph ph-github-logo"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <img src="Project-4.png" alt="Project" class="project-img">
+                    <div class="project-content">
+                        <h3>Calculato</h3>
+                        <p>A modern calculator web application featuring a sleek glassmorphism interface, dynamic
+                            animations, and smooth interactions, built with React and Tailwind CSS.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/banibrataBuilds/Calculato" class="btn btn-primary btn-sm"
+                                target="_blank" rel="noopener noreferrer">View Details</a>
+                            <button class="icon-btn"><i class="ph ph-arrow-right"></i></button>
+                            <a href="https://github.com/banibrataBuilds" class="icon-btn" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="ph ph-github-logo"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <img src="Project-5.png" alt="Project" class="project-img">
+                    <div class="project-content">
+                        <h3>GitHub Developer Finder</h3>
+                        <p>A GitHub developer search application that allows users to find developers by username and
+                            explore their profiles, repositories, followers, and other key account information.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/banibrataBuilds/GitHub-Developer-Finder"
+                                class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">View
+                                Details</a>
+                            <button class="icon-btn"><i class="ph ph-arrow-right"></i></button>
+                            <a href="https://github.com/banibrataBuilds" class="icon-btn" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="ph ph-github-logo"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <img src="Project-6.png" alt="Project" class="project-img">
+                    <div class="project-content">
+                        <h3>Gully Pizza Website</h3>
+                        <p>A modern and responsive frontend-only pizza restaurant website showcasing menu items, special
+                            offers, and an engaging user interface designed for a smooth food browsing experience.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/banibrataBuilds/Gully-Pizza-Website"
+                                class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">View
+                                Details</a>
+                            <button class="icon-btn"><i class="ph ph-arrow-right"></i></button>
+                            <a href="https://github.com/banibrataBuilds" class="icon-btn" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="ph ph-github-logo"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="projects">
+            <div class="projects-header" style="margin-bottom: 2rem;">
+                <h2 class="section-title">Let's Work Together</h2>
+            </div>
+
+            <div class="contact-section">
+                <form class="contact-form" action="mailto:chakrabortybanibrata432@gmail.com" method="post"
+                    enctype="text/plain">
+                    <h3>Send me a message</h3>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="Name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="Email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="Message" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <p>I'm always open to discussing new opportunities, creative projects, or partnerships. Whether you
+                        have a specific project in mind or just want to explore possibilities, I'd love to connect.</p>
+                    <ul>
+                        <li>Web & Mobile Development</li>
+                        <li>Technical Consulting</li>
+                        <li>Speaking & Workshops</li>
+                    </ul>
+
+                    <div class="socials-box">
+                        <h4>My Socials</h4>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/_banibrata_chronicles?igsi=OG5hb3JjaHlsbzJl"
+                                target="_blank" rel="noopener noreferrer"><i class="ph ph-instagram-logo"></i></a>
+                            <a href="mailto:chakrabortybanibrata432@gmail.com"><i class="ph ph-envelope-simple"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer"><i class="ph ph-twitter-logo"></i></a>
+                            <a href="https://www.linkedin.com/in/banibratachakraborty?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                                target="_blank" rel="noopener noreferrer"><i class="ph ph-linkedin-logo"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="height: 100px;"></div>
+    </div>
+
+    <!-- Scroll Canvas Script (Preserved) -->
+    <script src="script.js"></script>
+</body>
+
+</html>
