@@ -38,18 +38,6 @@ To run this project locally, follow these simple steps:
 4. **Open in browser:**
    Navigate to `http://localhost:3000` (or the port provided by your server).
 
-## ☁️ Deployment (Vercel Ready)
-
-This project is fully flexible and configured to be deployed on **Vercel** with zero configuration required. A `vercel.json` file is included to ensure clean URLs, trailing slash management, and optimal caching for the heavy image frame assets.
-
-### Deploying to Vercel:
-
-1. Push your latest code to GitHub.
-2. Go to your [Vercel Dashboard](https://vercel.com/dashboard).
-3. Click **Add New... > Project**.
-4. Import this GitHub repository.
-5. Vercel will automatically detect the static files. Click **Deploy**!
-
 ## 📬 Contact
 
 I'm always open to discussing new opportunities, creative projects, or partnerships!
