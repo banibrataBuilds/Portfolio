@@ -108,3 +108,75 @@ window.addEventListener('resize', () => {
 });
 
 preloadImages();
+
+// Magic Wand Cursor Logic
+const magicCursor = document.querySelector('[data-magic-cursor]');
+
+let lastSparkleTime = 0;
+
+window.addEventListener('mousemove', function (e) {
+    if (magicCursor.classList.contains('hidden')) {
+        magicCursor.classList.remove('hidden');
+    }
+
+    const posX = e.clientX;
+    const posY = e.clientY;
+
+    // Move the wand directly to the cursor
+    magicCursor.style.left = `${posX}px`;
+    magicCursor.style.top = `${posY}px`;
+
+    // Throttle sparkle creation for performance
+    const now = Date.now();
+    if (now - lastSparkleTime > 30) {
+        createSparkle(posX, posY);
+        lastSparkleTime = now;
+    }
+});
+
+// Hide cursor when leaving the window
+document.addEventListener('mouseleave', () => magicCursor.classList.add('hidden'));
+document.addEventListener('mouseenter', () => magicCursor.classList.remove('hidden'));
+
+// Add click effect
+window.addEventListener('mousedown', () => magicCursor.classList.add('clicking'));
+window.addEventListener('mouseup', () => magicCursor.classList.remove('clicking'));
+
+// Hover effect for clickables
+const clickables = document.querySelectorAll('a, button, .btn, .icon-btn');
+clickables.forEach(clickable => {
+    clickable.addEventListener('mouseenter', () => magicCursor.classList.add('hovering'));
+    clickable.addEventListener('mouseleave', () => magicCursor.classList.remove('hovering'));
+});
+
+// Function to create a dropping sparkle
+function createSparkle(x, y) {
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle';
+    document.body.appendChild(sparkle);
+
+    sparkle.style.left = `${x}px`;
+    sparkle.style.top = `${y}px`;
+
+    // Dynamic magical colors
+    const colors = ['#ffff66', '#ff9933', '#ff3366', '#ffcc00', '#ff0055'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    sparkle.style.background = randomColor;
+    sparkle.style.boxShadow = `0 0 8px ${randomColor}, 0 0 15px #ff3366`;
+
+    // Randomize movement: fall down and drift slightly with wider spread
+    const moveX = (Math.random() - 0.5) * 100;
+    const moveY = (Math.random() * 100) + 30;
+
+    sparkle.animate([
+        { transform: `translate(0, 0) scale(1) rotate(0deg)`, opacity: 1 },
+        { transform: `translate(${moveX}px, ${moveY}px) scale(0) rotate(180deg)`, opacity: 0 }
+    ], {
+        duration: 800 + Math.random() * 600,
+        easing: 'cubic-bezier(0, .9, .57, 1)',
+        fill: 'forwards'
+    });
+
+    // Cleanup
+    setTimeout(() => sparkle.remove(), 1500);
+}
