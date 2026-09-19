@@ -1,3 +1,9 @@
+// Force page to load from the top on refresh
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 const canvas = document.getElementById("hero-lightpass");
 const context = canvas.getContext("2d");
 
@@ -180,3 +186,20 @@ function createSparkle(x, y) {
     // Cleanup
     setTimeout(() => sparkle.remove(), 1500);
 }
+
+// Reveal Animation on Scroll
+const revealElements = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            // Optional: To make it repeat every time, remove the unobserve
+            // observer.unobserve(entry.target); 
+        }
+    });
+}, {
+    root: null,
+    threshold: 0.15,
+});
+
+revealElements.forEach(el => revealObserver.observe(el));

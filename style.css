@@ -4,7 +4,7 @@
     --bg-dark: #09090b; /* Very dark, almost black */
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
-    --accent-purple: #a855f7;
+    --accent-purple: #8d9863;
     --accent-purple-hover: #9333ea;
     --bg-card: rgba(255, 255, 255, 0.03);
     --border-color: rgba(255, 255, 255, 0.08);
@@ -565,4 +565,16 @@ body, a, button, .btn, .icon-btn, input, textarea {
     pointer-events: none;
     z-index: 9998;
     box-shadow: 0 0 8px #ff9933, 0 0 15px #ff3366;
+}
+
+/* Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px) scale(0.9);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
